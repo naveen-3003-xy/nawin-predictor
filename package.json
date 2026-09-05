@@ -1,0 +1,18 @@
+{
+  "name": "nawin-predictor",
+  "version": "0.1.0",
+  "description": "NaWIN Predictor - cricket match prediction web app (vibe-coded prototype) - stats-based win probability predictions for cricket matches, with optional live data from CricAPI.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
