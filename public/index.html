@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NaWIN Predictor</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark">🏏</span>
+        <span class="brand-name">NaWIN Predictor</span>
+      </div>
+      <div id="data-badge" class="data-badge">checking data source…</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Match win predictions</h1>
+      <p>
+        Stats-based predictions from team power ratings, recent form, head-to-head
+        record and home advantage. Click any match to see exactly how the number
+        was built.
+      </p>
+    </section>
+
+    <section id="match-list" class="match-list" aria-live="polite">
+      <div class="loading">Loading fixtures…</div>
+    </section>
+  </main>
+
+  <div id="detail-overlay" class="overlay hidden">
+    <div class="detail-panel" role="dialog" aria-modal="true">
+      <button id="close-detail" class="close-btn" aria-label="Close">✕</button>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Prototype build — predictions are a statistical estimate, not a guarantee. For research/entertainment use.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
