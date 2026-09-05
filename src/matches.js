@@ -171,11 +171,36 @@ async function getMatches() {
   return result;
 }
 
+/**
+ * The broader /matches endpoint is experimental - some CricAPI plans may not
+ * expose it, or it may fail for unrelated reasons. It's purely additive (a
+ * chance at seeing upcoming/not-yet-started fixtures currentMatches doesn't
+ * surface), so a failure here must never break the main currentMatches flow:
+ * swallow it and just return nothing extra.
+ */
+async function fetchScheduleSafely() {
+  try {
+    return await cricapi.getMatchesSchedule();
+  } catch (err) {
+    console.warn('CricAPI schedule endpoint unavailable, continuing without it:', err.message);
+    return [];
+  }
+}
+
+/** Combine two raw CricAPI match lists, keeping the first occurrence of each match id. */
+function mergeById(primary, extra) {
+  const seen = new Set(primary.map((m) => m.id));
+  const additional = extra.filter((m) => m && m.id && !seen.has(m.id));
+  return [...primary, ...additional];
+}
+
 async function fetchMatchesFresh() {
   if (cricapi.isConfigured()) {
     try {
       const raw = await cricapi.getCurrentMatches();
-      const mapped = mapLiveMatches(raw);
+      const extra = await fetchScheduleSafely();
+      const merged = mergeById(raw, extra);
+      const mapped = mapLiveMatches(merged);
       if (mapped.length > 0) {
         return { source: 'live', matches: mapped.map(attachPrediction) };
       }
