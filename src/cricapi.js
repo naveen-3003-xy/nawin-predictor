@@ -40,10 +40,23 @@ async function getCurrentMatches() {
   return json.data || [];
 }
 
+/**
+ * Raw call: the broader match list endpoint, which (per CricAPI's docs)
+ * covers more of the schedule than currentMatches - including matches that
+ * haven't started yet. This is experimental: some CricAPI plans may not
+ * include it, or it may return the same matches as currentMatches. Callers
+ * should treat a failure here as "no extra data", not a fatal error - the
+ * app already works fine on currentMatches alone.
+ */
+async function getMatchesSchedule() {
+  const json = await fetchJson('matches', { offset: 0 });
+  return json.data || [];
+}
+
 /** Raw call: full info (including scorecard-level detail) for one match. */
 async function getMatchInfo(matchId) {
   const json = await fetchJson('match_info', { id: matchId });
   return json.data || null;
 }
 
-module.exports = { isConfigured, getCurrentMatches, getMatchInfo };
+module.exports = { isConfigured, getCurrentMatches, getMatchesSchedule, getMatchInfo };
