@@ -22,6 +22,39 @@ const TEAMS = {
   BAN: { code: 'BAN', name: 'Bangladesh', rating: 74, recentForm: ['W', 'L', 'L', 'W', 'L'] },
   WI: { code: 'WI', name: 'West Indies', rating: 71, recentForm: ['L', 'L', 'W', 'L', 'W'] },
   AFG: { code: 'AFG', name: 'Afghanistan', rating: 78, recentForm: ['W', 'W', 'L', 'W', 'L'] },
+
+  // --- Caribbean Premier League (CPL) franchises ---
+  // Ratings derived from the actual 2026 CPL points table (position + net
+  // run rate), not placeholders - see README for how these get updated.
+  AAB: { code: 'AAB', name: 'Antigua and Barbuda Falcons', rating: 80, recentForm: ['L', 'W', 'W', 'W', 'W'] },
+  SLK: { code: 'SLK', name: 'Saint Lucia Kings', rating: 77, recentForm: ['W', 'L', 'W', 'W', 'L'] },
+  GAW: { code: 'GAW', name: 'Guyana Amazon Warriors', rating: 76, recentForm: ['L', 'W', 'W', 'W', 'W'] },
+  JAK: { code: 'JAK', name: 'Jamaica Kingsmen', rating: 75, recentForm: ['L', 'W', 'L', 'W', 'W'] },
+  BAT: { code: 'BAT', name: 'Barbados Tridents', rating: 68, recentForm: ['L', 'W', 'L', 'W', 'L'] },
+  TKR: { code: 'TKR', name: 'Trinbago Knight Riders', rating: 65, recentForm: ['L', 'L', 'W', 'L', 'W'] },
+  SKN: { code: 'SKN', name: 'St Kitts and Nevis Patriots', rating: 60, recentForm: ['L', 'L', 'L', 'W', 'L'] },
+
+  // --- English County Championship (Division One), 2026 season ---
+  NOT: { code: 'NOT', name: 'Nottinghamshire', rating: 81, recentForm: ['W', 'W', 'L', 'W', 'W'] },
+  SOM: { code: 'SOM', name: 'Somerset', rating: 79, recentForm: ['W', 'L', 'W', 'W', 'W'] },
+  WAR: { code: 'WAR', name: 'Warwickshire', rating: 78, recentForm: ['L', 'W', 'W', 'W', 'L'] },
+  GLA: { code: 'GLA', name: 'Glamorgan', rating: 75, recentForm: ['W', 'L', 'W', 'L', 'W'] },
+  SUS: { code: 'SUS', name: 'Sussex', rating: 74, recentForm: ['L', 'W', 'L', 'W', 'W'] },
+  ESS: { code: 'ESS', name: 'Essex', rating: 73, recentForm: ['W', 'L', 'L', 'W', 'L'] },
+  YOR: { code: 'YOR', name: 'Yorkshire', rating: 72, recentForm: ['L', 'W', 'L', 'L', 'W'] },
+  SUR: { code: 'SUR', name: 'Surrey', rating: 70, recentForm: ['L', 'L', 'W', 'L', 'L'] },
+  LEI: { code: 'LEI', name: 'Leicestershire', rating: 68, recentForm: ['L', 'L', 'L', 'W', 'L'] },
+  HAM: { code: 'HAM', name: 'Hampshire', rating: 65, recentForm: ['L', 'L', 'L', 'L', 'W'] },
+
+  // --- English County Championship (Division Two), 2026 season ---
+  DUR: { code: 'DUR', name: 'Durham', rating: 80, recentForm: ['W', 'W', 'W', 'L', 'W'] },
+  KEN: { code: 'KEN', name: 'Kent', rating: 74, recentForm: ['W', 'L', 'W', 'W', 'L'] },
+  NTH: { code: 'NTH', name: 'Northamptonshire', rating: 73, recentForm: ['L', 'W', 'W', 'L', 'W'] },
+  WOR: { code: 'WOR', name: 'Worcestershire', rating: 70, recentForm: ['W', 'L', 'L', 'W', 'L'] },
+  MID: { code: 'MID', name: 'Middlesex', rating: 68, recentForm: ['L', 'W', 'L', 'L', 'W'] },
+  DER: { code: 'DER', name: 'Derbyshire', rating: 67, recentForm: ['L', 'L', 'W', 'L', 'W'] },
+  LAN: { code: 'LAN', name: 'Lancashire', rating: 65, recentForm: ['L', 'L', 'L', 'W', 'L'] },
+  GLO: { code: 'GLO', name: 'Gloucestershire', rating: 58, recentForm: ['L', 'L', 'L', 'L', 'W'] },
 };
 
 /**
