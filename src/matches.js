@@ -25,6 +25,35 @@ const NAME_TO_CODE = {
   Bangladesh: 'BAN',
   'West Indies': 'WI',
   Afghanistan: 'AFG',
+
+  // CPL franchises
+  'Antigua and Barbuda Falcons': 'AAB',
+  'Saint Lucia Kings': 'SLK',
+  'Guyana Amazon Warriors': 'GAW',
+  'Jamaica Kingsmen': 'JAK',
+  'Barbados Tridents': 'BAT',
+  'Trinbago Knight Riders': 'TKR',
+  'St Kitts and Nevis Patriots': 'SKN',
+
+  // English County Championship sides
+  Nottinghamshire: 'NOT',
+  Somerset: 'SOM',
+  Warwickshire: 'WAR',
+  Glamorgan: 'GLA',
+  Sussex: 'SUS',
+  Essex: 'ESS',
+  Yorkshire: 'YOR',
+  Surrey: 'SUR',
+  Leicestershire: 'LEI',
+  Hampshire: 'HAM',
+  Durham: 'DUR',
+  Kent: 'KEN',
+  Northamptonshire: 'NTH',
+  Worcestershire: 'WOR',
+  Middlesex: 'MID',
+  Derbyshire: 'DER',
+  Lancashire: 'LAN',
+  Gloucestershire: 'GLO',
 };
 
 /** Map a raw team name to our internal code when we recognize it, else return the name as-is. */
